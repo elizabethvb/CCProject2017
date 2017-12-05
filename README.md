@@ -123,6 +123,13 @@ Ideally I would have taken the words associated with influential users' tweets a
 to better understand the tone of the conversation around the protests. Additionally, it would have been good to visualize the graph,
 at least for the top 100 most influential users according to their PageRank.
 
+# Update - WordCount calculation
+We were able to do a very preliminary look at the WordCount of the total corpus of tweets associated with the most influential user
+according to PageRank (Stevenwhirsch99). The file is attached (user1WordCounts.txt), and is not sorted. This is a starting point for 
+continued analysis. Stopwords must be removed, words must be ranked, and then sentiment analysis applied. Many of the tweets are repeated
+numerous times, and while this may initially seem to be problematic, it indicates the WEIGHT with which those words appear in the 
+protest conversation. Their sentiment carries further because they are seen more often by more people.
+
 
 
 
