@@ -134,11 +134,11 @@ protest conversation. Their sentiment carries further because they are seen more
 In continuing to work toward obtaining average sentiment by user in ranked order, we were able to obtain some preliminary results.
 
 The top 5 users by PageRank (who were retweeted by others) in the data set are (full list can be found in the finalUserSortbyPR.txt file):
-a.	DOJSuedFerguson	28.3622887396919
-b.	kemba722	26.134394384073403
-c.	maxrafaelwaller	16.10228462705418
-d.	jmo201	15.215956236974769
-e.	FeltzBilly	14.648017400070158
+  a.	DOJSuedFerguson	28.3622887396919
+  b.	kemba722	26.134394384073403
+  c.	maxrafaelwaller	16.10228462705418
+  d.	jmo201	15.215956236974769
+  e.	FeltzBilly	14.648017400070158
 
 For the above users, we combined all their tweets into a single corpus, allowing for repeated words since they represent a flow of communication across the entire network. The goal is to weight the sentiment of a particular user's Twitter communication by the volume of each individual word as it is used.
 
