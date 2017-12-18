@@ -123,12 +123,41 @@ Ideally I would have taken the words associated with influential users' tweets a
 to better understand the tone of the conversation around the protests. Additionally, it would have been good to visualize the graph,
 at least for the top 100 most influential users according to their PageRank.
 
-# Update - WordCount calculation
+# Update 1 - WordCount calculation
 We were able to do a very preliminary look at the WordCount of the total corpus of tweets associated with the most influential user
 according to PageRank (Stevenwhirsch99). The file is attached (user1WordCounts.txt), and is not sorted. This is a starting point for 
 continued analysis. Stopwords must be removed, words must be ranked, and then sentiment analysis applied. Many of the tweets are repeated
 numerous times, and while this may initially seem to be problematic, it indicates the WEIGHT with which those words appear in the 
 protest conversation. Their sentiment carries further because they are seen more often by more people.
+
+# Update 2 - Sentiment Analysis for Top Users by PageRank
+In continuing to work toward obtaining average sentiment by user in ranked order, we were able to obtain some preliminary results.
+
+The top 5 users by PageRank (who were retweeted by others) in the data set are (full list can be found in the finalUserSortbyPR.txt file):
+a.	DOJSuedFerguson	28.3622887396919
+b.	kemba722	26.134394384073403
+c.	maxrafaelwaller	16.10228462705418
+d.	jmo201	15.215956236974769
+e.	FeltzBilly	14.648017400070158
+
+For the above users, we combined all their tweets into a single corpus, allowing for repeated words since they represent a flow of communication across the entire network. The goal is to weight the sentiment of a particular user's Twitter communication by the volume of each individual word as it is used.
+
+Using TweetBlob's polarity measure of sentiment, we calculated the weighted sentiment for each of the top 5 users. As a measure of influence, we then multiplied the sentiment by the user PageRank in order to understand the magnitude of the user's impact given either a positive or negative sentiment on the protests. The results were:
+
+User	            Weighted Sentiment	    PageRank	      Sentiment * PageRank
+DOJSuedFerguson	   0.085724562	          28.36228874	        2.431344772
+kemba722	        -0.006265582	          26.13439438	       -0.163747201
+maxrafaelwaller	  -0.014421322	          16.10228463	       -0.232216226
+jmo201	          -0.018252553	          15.21595624	       -0.277730053
+FeltzBilly	      -0.021869565	          14.6480174	       -0.320345775
+		                                      Average Sentiment	  0.287461103
+                                          
+# Future Work
+We need to refine the above process, error check the code and methodology, and then compute the Sentiment * PageRank scores for the entire set of retweeted users. The same process can be followed across other data sets in order to better understand how sentiment, as well as measures of influence like PageRank, differ across events and their corresponding corpora. This can ultimately provide us with a quantification of sentiment that can be used to initialize simulation parameters for models of social dynamics.
+
+
+
+
 
 
 
