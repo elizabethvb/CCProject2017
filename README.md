@@ -142,15 +142,8 @@ e.	FeltzBilly	14.648017400070158
 
 For the above users, we combined all their tweets into a single corpus, allowing for repeated words since they represent a flow of communication across the entire network. The goal is to weight the sentiment of a particular user's Twitter communication by the volume of each individual word as it is used.
 
-Using TweetBlob's polarity measure of sentiment, we calculated the weighted sentiment for each of the top 5 users. As a measure of influence, we then multiplied the sentiment by the user PageRank in order to understand the magnitude of the user's impact given either a positive or negative sentiment on the protests. The results were:
+Using TweetBlob's polarity measure of sentiment, we calculated the weighted sentiment for each of the top 5 users. As a measure of influence, we then multiplied the sentiment by the user PageRank in order to understand the magnitude of the user's impact given either a positive or negative sentiment on the protests. The results can be found in the finalUserPolarityData.pdf file.
 
-User	            Weighted Sentiment	    PageRank	      Sentiment * PageRank
-DOJSuedFerguson	   0.085724562	          28.36228874	        2.431344772
-kemba722	        -0.006265582	          26.13439438	       -0.163747201
-maxrafaelwaller	  -0.014421322	          16.10228463	       -0.232216226
-jmo201	          -0.018252553	          15.21595624	       -0.277730053
-FeltzBilly	      -0.021869565	          14.6480174	       -0.320345775
-		                                      Average Sentiment	  0.287461103
                                           
 # Future Work
 We need to refine the above process, error check the code and methodology, and then compute the Sentiment * PageRank scores for the entire set of retweeted users. The same process can be followed across other data sets in order to better understand how sentiment, as well as measures of influence like PageRank, differ across events and their corresponding corpora. This can ultimately provide us with a quantification of sentiment that can be used to initialize simulation parameters for models of social dynamics.
